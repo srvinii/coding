@@ -17,5 +17,4 @@ try:
 	os.system("gcc -o %s %s" % (execv, obj))
 	os.system("./%s" % (execv))
 except:
-	print("[!] Erro\n")
-	sys.exit(1)
+    print()
