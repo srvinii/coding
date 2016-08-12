@@ -28,7 +28,6 @@ int main()
     } else {
         printf("[*] Socket criado.\n");
     }
-
     local.sin_family = AF_INET;
     local.sin_port = htons(PORT);
     memset(local.sin_zero, 0x0, 8);
