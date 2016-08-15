@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
 
-import os, sys
+from os import system
+from sys import argv, exit
 
-if(len(sys.argv)) <= 3:
+if(len(argv)) <= 3:
 	print("Modo de Uso:\n")
-	print("\t$ %s <fonte> <objeto> <executavel>" % str(sys.argv[0]))
-	print("Ex:\t$ %s main.c main.o main\n" % str(sys.argv[0]))
-	sys.exit(1)
+	print("\t$ %s <fonte> <objeto> <executavel>" % str(argv[0]))
+	print("Ex:\t$ %s main.c main.o main\n" % str(argv[0]))
+	exit(1)
 
-source = sys.argv[1]
-obj = sys.argv[2]
-execv = sys.argv[3]
+source = argv[1]
+obj = argv[2]
+execv = argv[3]
 
 try:
-	os.system("gcc -Wall -g -c %s -o %s" % (source, obj))
-	os.system("gcc -o %s %s" % (execv, obj))
-	os.system("./%s" % (execv))
+	system("gcc -Wall -g -c %s -o %s" % (source, obj))
+	system("gcc -o %s %s" % (execv, obj))
+	system("./%s" % (execv))
 except:
     print()
