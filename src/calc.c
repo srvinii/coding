@@ -3,12 +3,13 @@
 
 int main()
 {
-    float calc, n1, n2;
+    int n1, n2;
+    float calc;
     printf("Informe o numero base: ");
-    scanf("%f", &n1);
+    scanf("%d", &n1);
     printf("Informe o expoente: ");
-    scanf("%f", &n2);
+    scanf("%d", &n2);
     calc = pow(n1, n2);
-    printf("%1.f elevado a %1.f = %1.f\n", n1, n2, calc);
+    printf("%d elevado a %d = %1.f\n", n1, n2, calc);
     return 0;
 }
