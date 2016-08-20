@@ -7,7 +7,7 @@ struct nascimento {
     int ano;
 } dados;
 
-int main(void)
+int main()
 {
     printf("Informe o dia: ");
     scanf("%d", &dados.dia);
@@ -17,4 +17,5 @@ int main(void)
     scanf("%d", &dados.ano);
     printf("Data de nascimento: %d-%d-%d\n", dados.dia, dados.mes, dados.ano);
     printf("Idade: %d\n", dados.ano - 2016);
+    return 0;
 }
