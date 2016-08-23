@@ -31,7 +31,7 @@ int main()
 	}
 
 	lhost.sin_family	= AF_INET;
-	lhost.sin_port		= htons(PORT);
+	lhost.sin_port	= htons(PORT);
 	memset(lhost.sin_zero, 0x0, 8);
 
 	if(bind(msocket, (struct sockaddr*)&lhost, sizeof(lhost)) == -1) {
