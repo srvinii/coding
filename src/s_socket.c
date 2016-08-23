@@ -13,12 +13,12 @@
 
 #define PORT	2222
 #define LISTEN	1
-#define LEN		1024
+#define LEN	1024
 
 struct sockaddr_in lhost;
 struct sockaddr_in rhost;
 
-int main(int argc, char *argv[])
+int main()
 {
 	int msocket, csocket, slen, tm = sizeof(rhost);
 	char buffer[1024];
