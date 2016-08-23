@@ -15,7 +15,7 @@ execv = argv[3]
 
 try:
 	system("gcc -Wall -g -c %s -o %s" % (source, obj))
-	system("gcc -o %s %s" % (execv, obj))
+	system("g++ -o %s %s" % (execv, obj))
 	system("./%s" % (execv))
 except:
     print()
