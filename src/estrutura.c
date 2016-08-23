@@ -5,10 +5,11 @@ struct nascimento {
     int dia;
     int mes;
     int ano;
-} dados;
+};
 
 int main()
 {
+	struct nascimento dados;
     printf("Informe o dia: ");
     scanf("%d", &dados.dia);
     printf("Informe o mes: ");
