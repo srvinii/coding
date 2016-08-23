@@ -1,5 +1,5 @@
 /*
- *	Simples servidor socket em C
+ * Simples servidor socket em C
  */
 
 #include <stdio.h>
