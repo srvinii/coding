@@ -1,3 +1,5 @@
+// Compile: gcc -c calc.c; gcc -lm -o calc calc.o
+
 #include <stdio.h>
 #include <math.h>
 
