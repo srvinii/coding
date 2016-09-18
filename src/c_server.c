@@ -16,7 +16,7 @@ struct sockaddr_in net;
 int main()
 {
     int msocket, csocket, slen;
-    unsigned int len = sizeof(net);
+    unsigned int tm = sizeof(net);
     char buffer[BUFFER];
 
     if ((msocket = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
@@ -37,7 +37,7 @@ int main()
 
     listen(msocket, 1);
 
-    if ((csocket = accept(msocket, (struct sockaddr *) &net, &len)) == -1) {
+    if ((csocket = accept(msocket, (struct sockaddr *) &net, &tm)) == -1) {
         perror("accept");
         exit(1);
     }
