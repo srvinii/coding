@@ -6,6 +6,7 @@
 #include <iostream>
 #include "libcalc.hpp"
 
+
 int main()
 {
     int n1, n2;
@@ -19,16 +20,16 @@ int main()
     switch (operacao)
     {
         case '+':
-            adicao(n1, n2);
+            std::cout << "\nResultado: " << adicao(n1, n2) << "\n\n";
             break;
         case '-':
-            subtracao(n1, n2);
+            std::cout << "\nResultado: " << subtracao(n1, n2) << "\n\n";
             break;
         case '*':
-            multiplicacao(n1, n2);
+            std::cout << "\nResultado: " << multiplicacao(n1, n2) << "\n\n";
             break;
         case '/':
-            divisao(n1, n2);
+            std::cout << "\nResultado: " << divisao(n1, n2) << "\n\n";
             break;
         default:
             std::cout << "Operacao invalida" << std::endl;
