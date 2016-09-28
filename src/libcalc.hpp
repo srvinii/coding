@@ -3,27 +3,27 @@
  *  @file libcalc.hpp
  */
 
-#ifndef LIBCALC_HPP_INCLUDED
-#define LIBCALC_HPP_INCLUDED
+#ifndef LIBCALC_HPP
+#define LIBCALC_HPP
 
-void adicao(int n1, int n2)
+int adicao(int n1, int n2)
 {
-    std::cout << "\nResultado: " << n1 + n2 << std::endl;
+    return n1 + n2;
 }
 
-void subtracao(int n1, int n2)
+int subtracao(int n1, int n2)
 {
-    std::cout << "\nResultado: " << n1 - n2 << std::endl;
+    return n1 - n2;
 }
 
-void multiplicacao(int n1, int n2)
+int multiplicacao(int n1, int n2)
 {
-    std::cout << "\nResultado: " << n1 * n2 << std::endl;
+    return n1 * n2;
 }
 
-void divisao(float n1, float n2)
+float divisao(float n1, float n2)
 {
-    std::cout << "\nResultado: " << n1 / n2 << std::endl;
+    return n1 / n2;
 }
 
-#endif // LIBCALC_HPP_INCLUDED
+#endif // LIBCALC_HPP

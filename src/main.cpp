@@ -1,23 +1,39 @@
-//
-// Ref: https://sites.google.com/a/liesenberg.biz/cjogos/home/materiais-de-apoio/topicos-relativos-a-c/recursao/serie-de-fibonacci
-//
-
-/// @file main.cpp
+/**
+ *  @author Iago Roger
+ *  @file main.cpp
+ */
 
 #include <iostream>
+#include "libcalc.hpp"
 
-using namespace std;
 
 int main()
 {
-	long double num, calc, fib[2] = { 1, 1 };
-	cout << "Informe um numero: ";
-	cin >> num;
-	for (int c = 3; c <= num; c++) {
-		calc = fib[0] + fib[1];
-		fib[0] = fib[1];
-		fib[1] = calc;
-	}
-	cout << "Fibonacci: " << num << " = " << fib[1] << endl;
-	return 0;
+    int n1, n2;
+    char operacao;
+    std::cout << "Informe o primeiro numero: ";
+    std::cin >> n1;
+    std::cout << "Informe o segundo numero: ";
+    std::cin >> n2;
+    std::cout << "Informe a operacao matematica\nEx: (+, -, *, /): ";
+    std::cin >> operacao;
+    switch (operacao)
+    {
+        case '+':
+            std::cout << "\nResultado: " << adicao(n1, n2) << "\n\n";
+            break;
+        case '-':
+            std::cout << "\nResultado: " << subtracao(n1, n2) << "\n\n";
+            break;
+        case '*':
+            std::cout << "\nResultado: " << multiplicacao(n1, n2) << "\n\n";
+            break;
+        case '/':
+            std::cout << "\nResultado: " << divisao(n1, n2) << "\n\n";
+            break;
+        default:
+            std::cout << "Operacao invalida" << std::endl;
+            break;
+    }
+    return 0;
 }
