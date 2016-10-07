@@ -9,7 +9,7 @@ int main()
 	int n;
 	cout << "Informe um numero: ";
 	cin >> n;
-	cout << "Fibonacci: " << fib(n);
+	cout << "Fibonacci de " << n << " = " << fib(n);
 	return 0;
 }
 
