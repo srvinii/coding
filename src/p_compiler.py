@@ -1,7 +1,5 @@
-"""
-    Copyright (c) 2016, Iago Roger
-    All right reserved.
-"""
+#  Copyright (c) 2016, Iago Roger
+#  All right reserved.
 
 import os
 import sys
