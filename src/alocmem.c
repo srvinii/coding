@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct {
+typedef struct Dados Dados;
+
+struct Dados {
     int idade;
-} Dados;
+};
 
 int main()
 {
-    Dados* d = malloc(sizeof(Dados));
+    Dados *d = malloc(sizeof(Dados));
     
     printf("Informe sua idade: ");
     scanf("%d", &d->idade);
