@@ -3,8 +3,9 @@
 
 import os
 import sys
+import os.path
 
-CXX = "g++"
+CXX = "gcc"
 CXXFLAGS = "-Wall"
 
 if (len(sys.argv) < 3):
@@ -18,9 +19,12 @@ OBJ = sys.argv[2] # OBJ = arquivo objeto que vai ser gerado
 BIN = sys.argv[3] # BIN = arquivo binario que vai ser gerado
 
 try:
-    os.system(CXX + " " + CXXFLAGS + " -c " + SRC + " -o " + OBJ) 
-    os.system(CXX + " " + " -o " + BIN + " " + OBJ)
-    os.system("%s" % (BIN))
+	if (os.path.exists(BIN) == False):
+		os.system("%s" % (BIN))
+		os.system(CXX + " " + CXXFLAGS + " -c " + SRC + " -o " + OBJ) 
+		os.system(CXX + " " + " -o " + BIN + " " + OBJ)
+	else:
+		os.system("clear")
 
 except:
     print ("Erro")
