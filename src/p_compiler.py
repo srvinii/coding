@@ -1,11 +1,12 @@
 #  Copyright (c) 2016, Iago Roger
 #  All right reserved.
 
-import os
 import sys
+import os,os.path
+from subprocess import Popen
 
-CXX = "g++"
-CXXFLAGS = "-Wall"
+CC = "gcc"
+CFLAGS = "-Wall"
 
 if (len(sys.argv) < 3):
     print ("Modo de Uso:\n------------\n")
@@ -18,10 +19,13 @@ OBJ = sys.argv[2] # OBJ = arquivo objeto que vai ser gerado
 BIN = sys.argv[3] # BIN = arquivo binario que vai ser gerado
 
 try:
-    os.system(CXX + " " + CXXFLAGS + " -c " + SRC + " -o " + OBJ) 
-    os.system(CXX + " " + " -o " + BIN + " " + OBJ)
-    os.system("%s" % (BIN))
+	if (os.path.exists(BIN) == True):
+		os.system("./%s" % (BIN))
+		subprocess.Popen(BIN)
+	
+	else:
+		os.system(CC + " " + CFLAGS + " -c " + SRC + " -o " + OBJ) 
+		os.system(CC + " " + " -o " + BIN + " " + OBJ)
 
 except:
-    print ("Erro")
     sys.exit(1)
