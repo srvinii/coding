@@ -7,7 +7,7 @@ import sys
 CXX = "g++"
 CXXFLAGS = "-Wall"
 
-if (len(sys.argv) == 1):
+if (len(sys.argv) < 3):
     print ("Modo de Uso:\n------------\n")
     print ("\t $ %s <source.cpp> <object.o> <binary.exe>" % str(sys.argv[0]))
     print ("Ex:\t $ %s source.cpp source.o source.exe" % str(sys.argv[0]))
